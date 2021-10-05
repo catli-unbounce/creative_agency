@@ -1,6 +1,81 @@
-@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;800&display=swap");
-body {
-  font-family: "Commissioner", sans-serif; }
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-ul {
-  list-style: none; }
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.6rem; }
+
+.red {
+  color: #F94F4F; }
+
+.mt-20 {
+  margin-top: 2rem; }
+
+.container {
+  width: 80%;
+  margin: 0 auto; }
+
+.header {
+  display: flex;
+  background: url("../images/desktop/image-hero.jpg") right top no-repeat; }
+  .header__container {
+    display: flex;
+    padding-top: 10rem; }
+    .header__container .header__content {
+      flex: 0 0 50%; }
+
+.button {
+  padding: 14px 25px;
+  border: none;
+  font-family: inherit;
+  font-weight: 400; }
+  .button-primary {
+    color: #FFFFFF;
+    background-color: #F94F4F; }
+  .button-secondary {
+    background-color: #191921;
+    color: #FFFFFF; }
+
+body {
+  font-family: "Commissioner", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300; }
+
+h1 {
+  font-size: 8.8rem;
+  line-height: 1.2; }
+
+h2 {
+  font-size: 6.4rem; }
+
+h3 {
+  font-size: 2rem; }
+
+nav {
+  height: 10rem;
+  display: flex; }
+  nav .navigation__logo {
+    flex: 0 0 50%;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: flex-start; }
+    nav .navigation__logo img {
+      margin-left: 10rem; }
+  nav .navigation__links {
+    background-color: #F94F4F;
+    flex: 0 0 50%;
+    margin-right: 10rem; }
+    nav .navigation__links ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      color: #FFFFFF; }
+
+.header {
+  height: 100vh; }

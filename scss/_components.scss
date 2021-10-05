@@ -1,11 +1,33 @@
+//HEADER 
+.header {
+    display: flex;
+    background: url('../images/desktop/image-hero.jpg') right top no-repeat;
+    
+    // background-repeat: no-repeat;
+    &__container{
+        display: flex;
+        padding-top: 10rem;
+        .header__content {
+            flex: 0 0 50%;
+        }
+    }
+}
+
 .button {
 
-    &-primary {
+    padding: 14px 25px;
+    border: none;
+    font-family: inherit;
+    font-weight: 400;
 
+    &-primary {
+        color: $white;
+        background-color: $red;
     }
 
     &-secondary {
-        
+        background-color: $background-black;
+        color: $white;
     }
 
     &-tertiary {

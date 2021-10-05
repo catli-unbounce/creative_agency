@@ -9,23 +9,36 @@
         <title>Frontend Mentor | Creative single page site</title>
     </head>
     <body>
-        <nav>
-            <ul>
-                <li>About</li>
-                <li>Service</li>
-                <li>Projects</li>
-                <li>Schedule a call</li>
-            </ul>
+        <nav class="navigation">
+            <div class="navigation__logo">
+                <img src="images/desktop/logo.svg">
+            </div>
+            <div class="navigation__links">
+                <ul>
+                    <li>About</li>
+                    <li>Service</li>
+                    <li>Projects</li>
+                    
+                </ul>
+                <button class="button button-secondary">Schedule a Call</button>
+            </div>
+            
         </nav>
         
         <main>
             <section class="header">
-                <h1>Branding & website design agency</h1>
-                <p>
-                    We specialize in visual storytelling by creating cohesive brand and website design 
-                    solutions for small businesses, giving lasting impressions to audiences in a digital world.
-                </p>
-                <button>Learn More</button>
+                <div class="container header__container">
+                    <div class="header__content">
+                        <h1>Branding & website design agency</h1>
+                        <p class="mt-20">
+                            We specialize in visual storytelling by creating cohesive brand and website design 
+                            solutions for small businesses, giving lasting impressions to audiences in a digital world.
+                        </p>
+                        <button class="button button-primary mt-20">Learn More</button>
+                    </div>
+                    
+                </div>
+                
             </section>
             <section class="schedule_call">
                 <h2>Design is strategic.</h2>

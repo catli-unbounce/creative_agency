@@ -1,10 +1,58 @@
 @import 'variables';
+@import 'base';
+@import 'utilities';
+@import 'components';
 
 body {
     font-family: $commissioner-font;
-
+    font-size: 1.8rem;
+    font-weight: 300;
 }
 
-ul {
-    list-style: none;
+h1 {
+    font-size: 8.8rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 6.4rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+nav {
+    height: 10rem;
+    display: flex;
+    
+    .navigation__logo {
+        flex: 0 0 50%;
+        flex-direction: column;
+        justify-content: center;
+        display: flex;
+        align-items: flex-start;
+        img {
+            margin-left: 10rem;
+        }
+    }
+
+    .navigation__links {
+        background-color: $red;
+        flex: 0 0 50%;
+        margin-right: 10rem;
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            
+            color: $white;
+        }
+    }    
+}
+
+
+.header {
+    height: 100vh;
 }
