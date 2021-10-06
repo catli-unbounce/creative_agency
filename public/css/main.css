@@ -83,8 +83,40 @@ body {
     align-items: center;
     justify-content: flex-end; }
   .our_approach__container {
-    flex: 0 0 60%;
-    padding-right: 10rem; }
+    flex: 0 0 52%;
+    padding-right: 16rem; }
+    .our_approach__container h3 {
+      position: relative;
+      margin: 2.5rem 0; }
+      .our_approach__container h3 span {
+        position: absolute;
+        left: -42px;
+        font-size: 6rem;
+        bottom: -18px;
+        opacity: 0.4; }
+    .our_approach__container p {
+      margin-bottom: 6rem; }
+
+.footer {
+  height: 25rem;
+  display: flex;
+  align-items: center;
+  position: relative; }
+  .footer__icon {
+    position: absolute;
+    top: 10rem;
+    left: -6rem; }
+  .footer__container {
+    display: flex;
+    align-items: center; }
+    .footer__container h2 {
+      flex: 0 0 50%; }
+    .footer__container button {
+      display: block; }
+  .footer__btn-container {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: flex-end; }
 
 body {
   font-family: "Commissioner", sans-serif;

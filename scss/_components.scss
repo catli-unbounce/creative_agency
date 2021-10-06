@@ -86,7 +86,57 @@
     }
 
     &__container {
-        flex: 0 0 60%;
-        padding-right: 10rem;
+        flex: 0 0 52%;
+        padding-right: 16rem;
+
+        h3 {
+            position: relative;
+            margin: 2.5rem 0;
+            span {
+                position: absolute;
+                left: -42px;
+                font-size: 6rem;
+               
+                bottom: -18px;
+                opacity: 0.4;
+            }
+        }
+
+        p {
+            margin-bottom: 6rem;
+        }
     }
+}
+
+.footer {
+    height: 25rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+
+    &__icon {
+        position: absolute;
+        top: 10rem;
+        left: -6rem;
+    }
+    &__container {
+        display: flex;
+        align-items: center;
+
+        h2 {
+            flex: 0 0 50%;
+        }
+    
+        button {
+            display: block;
+        }
+    }
+
+    &__btn-container {
+        flex: 0 0 50%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
 }
