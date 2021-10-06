@@ -16,13 +16,18 @@ body {
 .mt-20 {
   margin-top: 2rem; }
 
+.mb-20 {
+  margin-bottom: 2rem; }
+
 .container {
   width: 80%;
   margin: 0 auto; }
 
 .header {
   display: flex;
-  background: url("../images/desktop/image-hero.jpg") right top no-repeat; }
+  background: url("../images/desktop/image-hero.jpg") right top no-repeat;
+  height: calc(100vh - 10rem);
+  background-size: contain; }
   .header__container {
     display: flex;
     padding-top: 10rem; }
@@ -30,6 +35,7 @@ body {
       flex: 0 0 50%; }
 
 .button {
+  cursor: pointer;
   padding: 14px 25px;
   border: none;
   font-family: inherit;
@@ -40,6 +46,25 @@ body {
   .button-secondary {
     background-color: #191921;
     color: #FFFFFF; }
+
+.schedule_call {
+  display: flex;
+  background-color: #191921; }
+  .schedule_call__content {
+    color: #FFFFFF;
+    padding-top: 15rem; }
+    .schedule_call__content div {
+      width: 60%;
+      margin: 0 auto; }
+
+.our_approach {
+  display: flex;
+  height: 70rem; }
+  .our_approach__content {
+    flex: 0 0 50%;
+    background-color: #F94F4F;
+    color: #FFFFFF;
+    margin-top: -40rem; }
 
 body {
   font-family: "Commissioner", sans-serif;
@@ -76,6 +101,3 @@ nav {
       display: flex;
       justify-content: space-between;
       color: #FFFFFF; }
-
-.header {
-  height: 100vh; }
