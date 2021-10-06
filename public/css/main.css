@@ -26,7 +26,7 @@ body {
 .header {
   display: flex;
   background: url("../images/desktop/image-hero.jpg") right top no-repeat;
-  height: calc(100vh - 10rem);
+  height: calc(100vh - 15rem);
   background-size: contain; }
   .header__container {
     display: flex;
@@ -36,10 +36,11 @@ body {
 
 .button {
   cursor: pointer;
-  padding: 14px 25px;
+  padding: 16px 30px;
   border: none;
   font-family: inherit;
-  font-weight: 400; }
+  font-weight: 600;
+  font-size: 2rem; }
   .button-primary {
     color: #FFFFFF;
     background-color: #F94F4F; }
@@ -47,24 +48,43 @@ body {
     background-color: #191921;
     color: #FFFFFF; }
 
-.schedule_call {
+.strategic {
   display: flex;
   background-color: #191921; }
-  .schedule_call__content {
+  .strategic img {
+    flex: 0 0 52%; }
+  .strategic__content {
     color: #FFFFFF;
-    padding-top: 15rem; }
-    .schedule_call__content div {
+    padding-top: 15rem;
+    position: relative; }
+    .strategic__content div {
       width: 60%;
       margin: 0 auto; }
+      .strategic__content div img {
+        position: absolute;
+        left: -6.2rem; }
 
 .our_approach {
   display: flex;
-  height: 70rem; }
+  justify-content: flex-end;
+  height: 70rem;
+  position: relative; }
+  .our_approach h2 {
+    position: absolute;
+    width: 30%;
+    left: 35rem;
+    top: 10rem; }
   .our_approach__content {
-    flex: 0 0 50%;
+    flex: 0 0 65%;
     background-color: #F94F4F;
     color: #FFFFFF;
-    margin-top: -40rem; }
+    margin-top: -20rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; }
+  .our_approach__container {
+    flex: 0 0 60%;
+    padding-right: 10rem; }
 
 body {
   font-family: "Commissioner", sans-serif;
@@ -81,23 +101,34 @@ h2 {
 h3 {
   font-size: 2rem; }
 
+p {
+  line-height: 2; }
+
 nav {
-  height: 10rem;
+  height: 15rem;
   display: flex; }
   nav .navigation__logo {
     flex: 0 0 50%;
-    flex-direction: column;
     justify-content: center;
     display: flex;
-    align-items: flex-start; }
-    nav .navigation__logo img {
-      margin-left: 10rem; }
+    align-items: center; }
+    nav .navigation__logo .navigation__img-container {
+      flex: 0 0 80%; }
+      nav .navigation__logo .navigation__img-container img {
+        margin-left: 10rem; }
   nav .navigation__links {
     background-color: #F94F4F;
     flex: 0 0 50%;
-    margin-right: 10rem; }
-    nav .navigation__links ul {
-      list-style: none;
+    display: flex; }
+    nav .navigation__links-container {
+      flex: 0 0 80%;
       display: flex;
-      justify-content: space-between;
-      color: #FFFFFF; }
+      align-items: center;
+      justify-content: space-between; }
+      nav .navigation__links-container ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        flex: 0 0 35%;
+        margin-left: 10rem;
+        color: #FFFFFF; }
