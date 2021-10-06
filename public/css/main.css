@@ -53,6 +53,9 @@ body {
   background-color: #191921; }
   .strategic img {
     flex: 0 0 52%; }
+    @media only screen and (max-width: 1250px) {
+      .strategic img {
+        flex: 0 0 35%; } }
   .strategic__content {
     color: #FFFFFF;
     padding-top: 15rem;
@@ -74,6 +77,9 @@ body {
     width: 30%;
     left: 35rem;
     top: 10rem; }
+    @media only screen and (max-width: 1250px) {
+      .our_approach h2 {
+        left: 25rem; } }
   .our_approach__content {
     flex: 0 0 65%;
     background-color: #F94F4F;
@@ -111,12 +117,21 @@ body {
     align-items: center; }
     .footer__container h2 {
       flex: 0 0 50%; }
+      @media only screen and (max-width: 1250px) {
+        .footer__container h2 {
+          flex: 1; } }
     .footer__container button {
       display: block; }
+    @media only screen and (max-width: 1250px) {
+      .footer__container {
+        width: 90%; } }
   .footer__btn-container {
     flex: 0 0 50%;
     display: flex;
     justify-content: flex-end; }
+    @media only screen and (max-width: 1250px) {
+      .footer__btn-container {
+        flex: 0 0 30%; } }
 
 body {
   font-family: "Commissioner", sans-serif;
@@ -141,13 +156,11 @@ nav {
   display: flex; }
   nav .navigation__logo {
     flex: 0 0 50%;
-    justify-content: center;
+    justify-content: flex-end;
     display: flex;
     align-items: center; }
     nav .navigation__logo .navigation__img-container {
       flex: 0 0 80%; }
-      nav .navigation__logo .navigation__img-container img {
-        margin-left: 10rem; }
   nav .navigation__links {
     background-color: #F94F4F;
     flex: 0 0 50%;
@@ -164,3 +177,11 @@ nav {
         flex: 0 0 35%;
         margin-left: 10rem;
         color: #FFFFFF; }
+
+@media only screen and (max-width: 1500px) {
+  nav .navigation__links-container {
+    flex: 0 0 90%; }
+  nav .navigation__links ul {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    flex: 1; } }
