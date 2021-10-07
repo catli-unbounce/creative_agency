@@ -45,6 +45,11 @@ nav {
         background-color: $red;
         flex: 0 0 50%;
         display: flex;
+
+        @media only screen and (max-width: 1000px) { 
+            display: none;
+        }
+        
         &-container {
             flex: 0 0 80%;
             display: flex;

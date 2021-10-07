@@ -23,11 +23,23 @@ body {
   width: 80%;
   margin: 0 auto; }
 
+.hero-image {
+  display: none; }
+  @media only screen and (max-width: 1000px) {
+    .hero-image {
+      display: block;
+      background: none; }
+      .hero-image img {
+        width: 100%; } }
+
 .header {
   display: flex;
   background: url("../images/desktop/image-hero.jpg") right top no-repeat;
   height: calc(100vh - 15rem);
   background-size: contain; }
+  @media only screen and (max-width: 1000px) {
+    .header {
+      background: none; } }
   .header__container {
     display: flex;
     padding-top: 10rem; }
@@ -51,6 +63,9 @@ body {
 .strategic {
   display: flex;
   background-color: #191921; }
+  @media only screen and (max-width: 1000px) {
+    .strategic {
+      flex-direction: column; } }
   .strategic img {
     flex: 0 0 52%; }
     @media only screen and (max-width: 1250px) {
@@ -72,6 +87,11 @@ body {
   justify-content: flex-end;
   height: 70rem;
   position: relative; }
+  @media only screen and (max-width: 1000px) {
+    .our_approach {
+      justify-content: center;
+      flex-direction: column;
+      height: fit-content; } }
   .our_approach h2 {
     position: absolute;
     width: 30%;
@@ -79,7 +99,10 @@ body {
     top: 10rem; }
     @media only screen and (max-width: 1250px) {
       .our_approach h2 {
-        left: 25rem; } }
+        left: 0;
+        position: relative;
+        width: 100%;
+        top: 0; } }
   .our_approach__content {
     flex: 0 0 65%;
     background-color: #F94F4F;
@@ -88,9 +111,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end; }
+    @media only screen and (max-width: 1000px) {
+      .our_approach__content {
+        margin-top: 0rem; } }
   .our_approach__container {
     flex: 0 0 52%;
     padding-right: 16rem; }
+    @media only screen and (max-width: 1250px) {
+      .our_approach__container {
+        flex: 0 0 80%; } }
     .our_approach__container h3 {
       position: relative;
       margin: 2.5rem 0; }
@@ -112,9 +141,16 @@ body {
     position: absolute;
     top: 10rem;
     left: -6rem; }
+    @media only screen and (max-width: 1000px) {
+      .footer__icon {
+        display: none; } }
   .footer__container {
     display: flex;
     align-items: center; }
+    @media only screen and (max-width: 1000px) {
+      .footer__container {
+        flex-direction: column;
+        align-items: flex-start; } }
     .footer__container h2 {
       flex: 0 0 50%; }
       @media only screen and (max-width: 1250px) {
@@ -165,6 +201,9 @@ nav {
     background-color: #F94F4F;
     flex: 0 0 50%;
     display: flex; }
+    @media only screen and (max-width: 1000px) {
+      nav .navigation__links {
+        display: none; } }
     nav .navigation__links-container {
       flex: 0 0 80%;
       display: flex;
