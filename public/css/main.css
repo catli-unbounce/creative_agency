@@ -141,7 +141,8 @@ body {
         margin-top: 0rem; } }
   .our_approach__container {
     flex: 0 0 52%;
-    padding-right: 16rem; }
+    padding-right: 16rem;
+    margin: 7rem 0; }
     @media only screen and (max-width: 1250px) {
       .our_approach__container {
         flex: 0 0 80%; } }
@@ -340,7 +341,8 @@ h2 {
   font-size: 6.4rem; }
   @media only screen and (max-width: 1250px) {
     h2 {
-      font-size: 4.8rem; } }
+      font-size: 4.8rem;
+      padding-bottom: 2rem; } }
 
 h3 {
   font-size: 2rem; }
