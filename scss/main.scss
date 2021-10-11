@@ -3,6 +3,8 @@
 @import 'utilities';
 @import 'components';
 
+@import 'navigation';
+
 body {
     font-family: $commissioner-font;
     font-size: 1.8rem;
@@ -12,10 +14,17 @@ body {
 h1 {
     font-size: 8.8rem;
     line-height: 1.2;
+    @media only screen and (max-width: $medium) { 
+        font-size: 6.4rem;
+    }
 }
 
 h2 {
     font-size: 6.4rem;
+
+    @media only screen and (max-width: $medium) { 
+        font-size: 4.8rem;
+    }
 }
 
 h3 {
@@ -24,66 +33,9 @@ h3 {
 
 p {
     line-height: 2;
+
+    @media only screen and (max-width: 750px) { 
+        line-height: 1.5;
+    }
 }
 
-nav {
-    height: 15rem;
-    display: flex;
-    
-    .navigation__logo {
-        flex: 0 0 50%;
-        justify-content: flex-end;
-        display: flex;
-        align-items: center;
-
-        .navigation__img-container {
-            flex: 0 0 80%;
-        }
-    }
-
-    .navigation__links {
-        background-color: $red;
-        flex: 0 0 50%;
-        display: flex;
-
-        @media only screen and (max-width: 1000px) { 
-            display: none;
-        }
-        
-        &-container {
-            flex: 0 0 80%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            ul {
-                list-style: none;
-                display: flex;
-                justify-content: space-between;
-                flex: 0 0 35%;
-                margin-left: 10rem;
-                color: $white;
-            }
-        }
-        
-    }    
-}
-
-
-@media only screen and (max-width: 1500px) {
-    nav {
-        .navigation__links {
-            // flex: 0 0 60%;
-            &-container {
-                flex: 0 0 90%;
-            }
-            ul {
-                margin-left: 2rem;
-                margin-right: 2rem;
-                flex: 1;
-            }
-        }
-    }
-  }
-
- 

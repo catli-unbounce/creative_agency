@@ -1,0 +1,104 @@
+nav {
+    height: 15rem;
+    display: flex;
+    // position: relative;
+    @media only screen and (max-width: $medium) { 
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hamburger-icon-container {
+        display: none;
+        cursor: pointer;
+
+        @media only screen and (max-width: $medium) { 
+            display: flex;
+            flex: 1;
+            justify-content: flex-start;
+        }
+
+        .flex-container {
+            flex: 0 0 90%;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    .navigation__logo {
+        flex: 0 0 50%;
+        justify-content: flex-end;
+        display: flex;
+        align-items: center;
+
+        .navigation__img-container {
+            flex: 0 0 80%;
+
+            @media only screen and (max-width: $xlarge) { 
+                flex: 0 0 90%;
+            }
+        }
+    }
+
+    .navigation__links {
+        background-color: $red;
+        flex: 0 0 50%;
+        display: flex;
+
+        @media only screen and (max-width: $medium) { 
+            // margin-top: 48rem;
+            position: absolute;
+        }
+        
+        &-container {
+            flex: 0 0 80%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @media only screen and (max-width: $xlarge) { 
+                flex: 0 0 90%;
+            }
+
+            @media only screen and (max-width: $medium) { 
+                flex-direction: column;
+                flex: 1;
+            }
+            
+            ul {
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                flex: 0 0 40%;
+                margin-left: 10rem;
+                color: $white;
+
+                @media only screen and (max-width: $xlarge) { 
+                    // flex-direction: column;
+                    margin-left: 4rem;
+                    margin-right: 4rem;
+                    flex: 1;
+                }
+
+                @media only screen and (max-width: $large) { 
+                    // flex-direction: column;
+                    margin-left: 2rem;
+                    margin-right: 2rem;
+                }
+
+                @media only screen and (max-width: $medium) { 
+                    flex-direction: column;
+                }
+
+                li {
+                    @media only screen and (max-width: $medium) { 
+                        padding-bottom: 2rem;
+                    }
+                }
+            }
+        }
+        
+    }    
+}
+
+
+ 

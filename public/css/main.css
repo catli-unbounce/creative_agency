@@ -22,10 +22,13 @@ body {
 .container {
   width: 80%;
   margin: 0 auto; }
+  @media only screen and (max-width: 1500px) {
+    .container {
+      flex: 0 0 90%; } }
 
 .hero-image {
   display: none; }
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 750px) {
     .hero-image {
       display: block;
       background: none; }
@@ -37,14 +40,17 @@ body {
   background: url("../images/desktop/image-hero.jpg") right top no-repeat;
   height: calc(100vh - 15rem);
   background-size: contain; }
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 750px) {
     .header {
       background: none; } }
   .header__container {
     display: flex;
-    padding-top: 10rem; }
+    padding-top: 5rem; }
     .header__container .header__content {
       flex: 0 0 50%; }
+      @media only screen and (max-width: 750px) {
+        .header__container .header__content {
+          flex: 0 0 100%; } }
 
 .button {
   cursor: pointer;
@@ -56,9 +62,22 @@ body {
   .button-primary {
     color: #FFFFFF;
     background-color: #F94F4F; }
+    .button-primary:hover {
+      background-color: #FF9393; }
   .button-secondary {
     background-color: #191921;
     color: #FFFFFF; }
+    .button-secondary:hover {
+      background-color: #434356; }
+  .button-tertiary {
+    background-color: transparent;
+    color: #F94F4F;
+    padding: 0;
+    border-bottom: solid 1px #F94F4F;
+    padding-bottom: 5px; }
+    .button-tertiary:hover {
+      color: #FF9393;
+      border-bottom: solid 1px #FF9393; }
 
 .strategic {
   display: flex;
@@ -91,18 +110,23 @@ body {
     .our_approach {
       justify-content: center;
       flex-direction: column;
-      height: fit-content; } }
-  .our_approach h2 {
-    position: absolute;
-    width: 30%;
-    left: 35rem;
-    top: 10rem; }
-    @media only screen and (max-width: 1250px) {
-      .our_approach h2 {
-        left: 0;
-        position: relative;
-        width: 100%;
-        top: 0; } }
+      height: fit-content;
+      background-color: #F94F4F; } }
+  .our_approach__header {
+    display: flex;
+    justify-content: center; }
+    .our_approach__header h2 {
+      position: absolute;
+      width: 30%;
+      left: 35rem;
+      top: 10rem; }
+      @media only screen and (max-width: 1250px) {
+        .our_approach__header h2 {
+          left: 0;
+          position: relative;
+          width: 100%;
+          top: 0;
+          color: #FFFFFF; } }
   .our_approach__content {
     flex: 0 0 65%;
     background-color: #F94F4F;
@@ -155,7 +179,8 @@ body {
       flex: 0 0 50%; }
       @media only screen and (max-width: 1250px) {
         .footer__container h2 {
-          flex: 1; } }
+          flex: 1;
+          padding-bottom: 2rem; } }
     .footer__container button {
       display: block; }
     @media only screen and (max-width: 1250px) {
@@ -169,6 +194,124 @@ body {
       .footer__btn-container {
         flex: 0 0 30%; } }
 
+.services__slideshow {
+  display: flex;
+  min-height: 50rem;
+  flex-direction: row-reverse; }
+
+.services__text {
+  background-color: #191921;
+  position: absolute;
+  left: 0;
+  width: 64%;
+  min-height: 50rem;
+  padding: 10rem;
+  z-index: 2; }
+  .services__text h2 {
+    color: white;
+    margin-bottom: 5rem; }
+  .services__text .services__arrows {
+    position: relative; }
+    .services__text .services__arrows svg {
+      margin-right: 2rem;
+      cursor: pointer; }
+      .services__text .services__arrows svg:hover {
+        transform: translateX(1px); }
+        .services__text .services__arrows svg:hover g {
+          stroke: #FF9393; }
+
+.services__img-container {
+  position: relative; }
+  .services__img-container::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: linear-gradient(0deg, rgba(3, 3, 3, 0.746936) 17%, rgba(53, 53, 53, 0.408001) 37%, rgba(252, 252, 252, 0) 100%); }
+  .services__img-container figcaption {
+    position: absolute;
+    right: 100px;
+    bottom: 75px;
+    color: #FFFFFF;
+    text-align: right;
+    z-index: 10; }
+    .services__img-container figcaption .title {
+      font-weight: 800; }
+
+nav {
+  height: 15rem;
+  display: flex; }
+  @media only screen and (max-width: 1000px) {
+    nav {
+      align-items: center;
+      justify-content: space-between; } }
+  nav .hamburger-icon-container {
+    display: none;
+    cursor: pointer; }
+    @media only screen and (max-width: 1000px) {
+      nav .hamburger-icon-container {
+        display: flex;
+        flex: 1;
+        justify-content: flex-start; } }
+    nav .hamburger-icon-container .flex-container {
+      flex: 0 0 90%;
+      display: flex;
+      justify-content: flex-end; }
+  nav .navigation__logo {
+    flex: 0 0 50%;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center; }
+    nav .navigation__logo .navigation__img-container {
+      flex: 0 0 80%; }
+      @media only screen and (max-width: 1500px) {
+        nav .navigation__logo .navigation__img-container {
+          flex: 0 0 90%; } }
+  nav .navigation__links {
+    background-color: #F94F4F;
+    flex: 0 0 50%;
+    display: flex; }
+    @media only screen and (max-width: 1000px) {
+      nav .navigation__links {
+        position: absolute; } }
+    nav .navigation__links-container {
+      flex: 0 0 80%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      @media only screen and (max-width: 1500px) {
+        nav .navigation__links-container {
+          flex: 0 0 90%; } }
+      @media only screen and (max-width: 1000px) {
+        nav .navigation__links-container {
+          flex-direction: column;
+          flex: 1; } }
+      nav .navigation__links-container ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        flex: 0 0 40%;
+        margin-left: 10rem;
+        color: #FFFFFF; }
+        @media only screen and (max-width: 1500px) {
+          nav .navigation__links-container ul {
+            margin-left: 4rem;
+            margin-right: 4rem;
+            flex: 1; } }
+        @media only screen and (max-width: 1250px) {
+          nav .navigation__links-container ul {
+            margin-left: 2rem;
+            margin-right: 2rem; } }
+        @media only screen and (max-width: 1000px) {
+          nav .navigation__links-container ul {
+            flex-direction: column; } }
+        @media only screen and (max-width: 1000px) {
+          nav .navigation__links-container ul li {
+            padding-bottom: 2rem; } }
+
 body {
   font-family: "Commissioner", sans-serif;
   font-size: 1.8rem;
@@ -177,50 +320,21 @@ body {
 h1 {
   font-size: 8.8rem;
   line-height: 1.2; }
+  @media only screen and (max-width: 1000px) {
+    h1 {
+      font-size: 6.4rem; } }
 
 h2 {
   font-size: 6.4rem; }
+  @media only screen and (max-width: 1000px) {
+    h2 {
+      font-size: 4.8rem; } }
 
 h3 {
   font-size: 2rem; }
 
 p {
   line-height: 2; }
-
-nav {
-  height: 15rem;
-  display: flex; }
-  nav .navigation__logo {
-    flex: 0 0 50%;
-    justify-content: flex-end;
-    display: flex;
-    align-items: center; }
-    nav .navigation__logo .navigation__img-container {
-      flex: 0 0 80%; }
-  nav .navigation__links {
-    background-color: #F94F4F;
-    flex: 0 0 50%;
-    display: flex; }
-    @media only screen and (max-width: 1000px) {
-      nav .navigation__links {
-        display: none; } }
-    nav .navigation__links-container {
-      flex: 0 0 80%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between; }
-      nav .navigation__links-container ul {
-        list-style: none;
-        display: flex;
-        justify-content: space-between;
-        flex: 0 0 35%;
-        margin-left: 10rem;
-        color: #FFFFFF; }
-
-@media only screen and (max-width: 1500px) {
-  nav .navigation__links-container {
-    flex: 0 0 90%; }
-  nav .navigation__links ul {
-    margin-left: 2rem;
-    margin-right: 2rem;
-    flex: 1; } }
+  @media only screen and (max-width: 750px) {
+    p {
+      line-height: 1.5; } }

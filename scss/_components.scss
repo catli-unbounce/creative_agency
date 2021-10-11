@@ -3,10 +3,9 @@
 .hero-image {
     display: none;
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: $small) {
         display: block;
         background: none;
-        
 
         img {
             width: 100%;
@@ -20,16 +19,20 @@
     background-size: contain;
 
 
-    @media only screen and (max-width: 1000px) { 
+    @media only screen and (max-width: $small) { 
         background: none;
     }
 
     &__container{
         display: flex;
-        padding-top: 10rem;
+        padding-top: 5rem;
 
         .header__content {
             flex: 0 0 50%;
+
+            @media only screen and (max-width: $small) { 
+                flex: 0 0 100%;
+            }
         }
     }
 
@@ -42,18 +45,36 @@
     font-family: inherit;
     font-weight: 600;
     font-size: 2rem;
+
     &-primary {
         color: $white;
         background-color: $red;
+
+        &:hover {
+            background-color: $red-hover;
+        }
     }
 
     &-secondary {
         background-color: $background-black;
         color: $white;
+
+        &:hover {
+            background-color: $black-hover;
+        }
     }
 
     &-tertiary {
-        
+        background-color: transparent;
+        color: $red;
+        padding: 0;
+        border-bottom: solid 1px $red;
+        padding-bottom: 5px;
+
+        &:hover {
+            color: $red-hover;
+            border-bottom: solid 1px $red-hover;
+        }
     }
 }
 
@@ -61,14 +82,14 @@
     display: flex;
     background-color: $background-black;
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: $medium) {
         flex-direction: column;
     }
     
     img {
         flex: 0 0 52%;
 
-        @media only screen and (max-width: 1250px) {
+        @media only screen and (max-width: $large) {
             flex: 0 0 35%;
         }
     }
@@ -95,25 +116,36 @@
     height: 70rem;
     position: relative;
 
-    @media only screen and (max-width: 1000px) { 
+    @media only screen and (max-width: $medium) { 
         justify-content: center;
         flex-direction: column;
         height: fit-content;
+        background-color: $red;
     }
 
-    h2 {
-        position: absolute;
-        width: 30%;
-        left: 35rem;
-        top: 10rem;
+    &__header {
+        display: flex;
+        justify-content: center;
 
-        @media only screen and (max-width: 1250px) {
-            left: 0;
-            position: relative;
-            width: 100%;
-            top: 0;
+        h2 {
+            position: absolute;
+            width: 30%;
+            left: 35rem;
+            top: 10rem;
+
+            @media only screen and (max-width: $large) {
+                left: 0;
+                position: relative;
+                width: 100%;
+                top: 0;
+                
+                color: $white;
+            }
         }
     }
+
+    
+
     &__content {
         flex: 0 0 65%;
         background-color: $red;
@@ -123,7 +155,7 @@
         align-items: center;
         justify-content: flex-end;
 
-        @media only screen and (max-width: 1000px) {
+        @media only screen and (max-width: $medium) {
             // display: ;
             margin-top: 0rem;
         }
@@ -133,7 +165,7 @@
         flex: 0 0 52%;
         padding-right: 16rem;
 
-        @media only screen and (max-width: 1250px) { 
+        @media only screen and (max-width: $large) { 
             flex: 0 0 80%;
         }
 
@@ -167,7 +199,8 @@
         position: absolute;
         top: 10rem;
         left: -6rem;
-        @media only screen and (max-width: 1000px) {
+
+        @media only screen and (max-width: $medium) {
             display: none;
         }
 
@@ -176,7 +209,7 @@
         display: flex;
         align-items: center;
 
-        @media only screen and (max-width: 1000px) {
+        @media only screen and (max-width: $medium) {
             flex-direction: column;
             align-items: flex-start;
         }
@@ -184,8 +217,9 @@
         h2 {
             flex: 0 0 50%;
 
-            @media only screen and (max-width: 1250px) {
-                flex: 1
+            @media only screen and (max-width: $large) {
+                flex: 1;
+                padding-bottom: 2rem;
             }
         }
     
@@ -193,7 +227,7 @@
             display: block;
         }
 
-        @media only screen and (max-width: 1250px) {
+        @media only screen and (max-width: $large) {
             width: 90%;
         }
     }
@@ -203,9 +237,76 @@
         display: flex;
         justify-content: flex-end;
 
-        @media only screen and (max-width: 1250px) {
+        @media only screen and (max-width: $large) {
             flex: 0 0 30%
         }
     }
     
+}
+
+.services {
+
+    &__slideshow {
+        display: flex;
+        min-height: 50rem;
+        flex-direction: row-reverse;
+    }
+
+    &__text {
+        background-color: $background-black;
+        position: absolute;
+        left: 0;    
+        width: 64%;
+        min-height: 50rem;
+        padding: 10rem;
+        z-index: 2;
+        h2 {
+            color: white;
+            margin-bottom: 5rem;
+        }
+
+        .services__arrows {
+            position: relative;
+
+            svg {
+                margin-right: 2rem;
+                cursor: pointer;
+
+                &:hover {
+                    transform: translateX(1px);
+
+                    g {
+                        stroke: $red-hover;
+                    }
+                }
+            }
+        }
+
+        
+    }
+
+    &__img-container {
+        position: relative;
+
+        &::after {content:'';
+            position:absolute;
+            left:0; top:0;
+            width:100%; height:100%;
+            display:inline-block;
+            background: linear-gradient(0deg, rgba(3,3,3,0.7469362745098039) 17%, rgba(53,53,53,0.40800070028011204) 37%, rgba(252,252,252,0) 100%);
+        }
+
+        figcaption {
+            position: absolute;
+            right: 100px;
+            bottom: 75px;
+            color: $white;
+            text-align: right;
+            z-index: 10;
+            
+            .title {
+                font-weight: 800;
+            }
+        }
+    }
 }
