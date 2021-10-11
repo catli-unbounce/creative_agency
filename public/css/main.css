@@ -92,7 +92,7 @@ body {
         flex: 0 0 35%; } }
   .strategic__content {
     color: #FFFFFF;
-    padding-top: 15rem;
+    margin: 7rem 0;
     position: relative; }
     .strategic__content div {
       width: 60%;
@@ -119,7 +119,8 @@ body {
       position: absolute;
       width: 30%;
       left: 35rem;
-      top: 10rem; }
+      top: 10rem;
+      color: #000000; }
       @media only screen and (max-width: 1250px) {
         .our_approach__header h2 {
           left: 0;
@@ -276,7 +277,9 @@ nav {
     display: flex; }
     @media only screen and (max-width: 1000px) {
       nav .navigation__links {
-        position: absolute; } }
+        position: absolute;
+        top: 15rem;
+        right: 4rem; } }
     nav .navigation__links-container {
       flex: 0 0 80%;
       display: flex;
@@ -298,19 +301,28 @@ nav {
         color: #FFFFFF; }
         @media only screen and (max-width: 1500px) {
           nav .navigation__links-container ul {
-            margin-left: 4rem;
-            margin-right: 4rem;
+            margin: 0 4rem;
             flex: 1; } }
         @media only screen and (max-width: 1250px) {
           nav .navigation__links-container ul {
-            margin-left: 2rem;
-            margin-right: 2rem; } }
+            margin: 0 2rem; } }
         @media only screen and (max-width: 1000px) {
           nav .navigation__links-container ul {
-            flex-direction: column; } }
-        @media only screen and (max-width: 1000px) {
-          nav .navigation__links-container ul li {
-            padding-bottom: 2rem; } }
+            flex-direction: column;
+            margin: 0;
+            align-self: stretch;
+            text-align: center; } }
+        nav .navigation__links-container ul li {
+          cursor: pointer; }
+          @media only screen and (max-width: 1000px) {
+            nav .navigation__links-container ul li {
+              padding-bottom: 2rem;
+              padding-top: 2rem; }
+              nav .navigation__links-container ul li:hover {
+                background-color: #FF9393; } }
+      @media only screen and (max-width: 1000px) {
+        nav .navigation__links-container .button-secondary {
+          margin: 2rem; } }
 
 body {
   font-family: "Commissioner", sans-serif;
@@ -326,7 +338,7 @@ h1 {
 
 h2 {
   font-size: 6.4rem; }
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1250px) {
     h2 {
       font-size: 4.8rem; } }
 
