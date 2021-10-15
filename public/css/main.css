@@ -48,6 +48,9 @@ body {
     padding-top: 5rem; }
     .header__container .header__content {
       flex: 0 0 50%; }
+      @media only screen and (max-width: 1250px) {
+        .header__container .header__content {
+          flex: 0 0 70%; } }
       @media only screen and (max-width: 750px) {
         .header__container .header__content {
           flex: 0 0 100%; } }
@@ -196,52 +199,85 @@ body {
       .footer__btn-container {
         flex: 0 0 30%; } }
 
-.services__slideshow {
-  display: flex;
-  min-height: 50rem;
-  flex-direction: row-reverse; }
-
-.services__text {
-  background-color: #191921;
-  position: absolute;
-  left: 0;
-  width: 64%;
-  min-height: 50rem;
-  padding: 10rem;
-  z-index: 2; }
-  .services__text h2 {
-    color: white;
-    margin-bottom: 5rem; }
-  .services__text .services__arrows {
-    position: relative; }
-    .services__text .services__arrows svg {
-      margin-right: 2rem;
-      cursor: pointer; }
-      .services__text .services__arrows svg:hover {
-        transform: translateX(1px); }
-        .services__text .services__arrows svg:hover g {
-          stroke: #FF9393; }
-
-.services__img-container {
-  position: relative; }
-  .services__img-container::after {
-    content: '';
+.services {
+  position: relative;
+  height: 73rem; }
+  .services div[data-slide="2"] {
+    z-index: 3; }
+  .services__slideshow {
+    display: flex;
+    min-height: 50rem;
+    flex-direction: row-reverse;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; }
+    @media only screen and (max-width: 750px) {
+      .services__slideshow {
+        flex-direction: column-reverse; } }
+  .services__text {
+    background-color: #191921;
     position: absolute;
     left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-    background: linear-gradient(0deg, rgba(3, 3, 3, 0.746936) 17%, rgba(53, 53, 53, 0.408001) 37%, rgba(252, 252, 252, 0) 100%); }
-  .services__img-container figcaption {
-    position: absolute;
-    right: 100px;
-    bottom: 75px;
-    color: #FFFFFF;
-    text-align: right;
-    z-index: 10; }
-    .services__img-container figcaption .title {
-      font-weight: 800; }
+    width: 64%;
+    min-height: 50rem;
+    padding: 10rem;
+    z-index: 2; }
+    @media only screen and (max-width: 750px) {
+      .services__text {
+        position: initial;
+        width: 100%; } }
+    .services__text h2 {
+      color: white;
+      margin-bottom: 5rem; }
+    .services__text .services__arrows {
+      position: relative; }
+      .services__text .services__arrows svg {
+        margin-right: 2rem;
+        cursor: pointer; }
+        .services__text .services__arrows svg:hover {
+          transform: translateX(1px); }
+          .services__text .services__arrows svg:hover g {
+            stroke: #FF9393; }
+  .services__img-container {
+    position: relative; }
+    .services__img-container::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      background: linear-gradient(0deg, rgba(3, 3, 3, 0.746936) 17%, rgba(53, 53, 53, 0.408001) 37%, rgba(252, 252, 252, 0) 100%); }
+    .services__img-container figcaption {
+      position: absolute;
+      right: 100px;
+      bottom: 75px;
+      color: #FFFFFF;
+      text-align: right;
+      z-index: 10; }
+      .services__img-container figcaption .title {
+        font-weight: 800; }
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s; }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
 
 nav {
   height: 15rem;
@@ -250,15 +286,15 @@ nav {
     nav {
       align-items: center;
       justify-content: space-between; } }
-  nav .hamburger-icon-container {
+  nav .menu-icon-container {
     display: none;
     cursor: pointer; }
     @media only screen and (max-width: 1000px) {
-      nav .hamburger-icon-container {
+      nav .menu-icon-container {
         display: flex;
         flex: 1;
         justify-content: flex-start; } }
-    nav .hamburger-icon-container .flex-container {
+    nav .menu-icon-container .flex-container {
       flex: 0 0 90%;
       display: flex;
       justify-content: flex-end; }
@@ -278,9 +314,7 @@ nav {
     display: flex; }
     @media only screen and (max-width: 1000px) {
       nav .navigation__links {
-        position: absolute;
-        top: 15rem;
-        right: 4rem; } }
+        display: none; } }
     nav .navigation__links-container {
       flex: 0 0 80%;
       display: flex;
@@ -289,10 +323,6 @@ nav {
       @media only screen and (max-width: 1500px) {
         nav .navigation__links-container {
           flex: 0 0 90%; } }
-      @media only screen and (max-width: 1000px) {
-        nav .navigation__links-container {
-          flex-direction: column;
-          flex: 1; } }
       nav .navigation__links-container ul {
         list-style: none;
         display: flex;
@@ -307,23 +337,8 @@ nav {
         @media only screen and (max-width: 1250px) {
           nav .navigation__links-container ul {
             margin: 0 2rem; } }
-        @media only screen and (max-width: 1000px) {
-          nav .navigation__links-container ul {
-            flex-direction: column;
-            margin: 0;
-            align-self: stretch;
-            text-align: center; } }
         nav .navigation__links-container ul li {
           cursor: pointer; }
-          @media only screen and (max-width: 1000px) {
-            nav .navigation__links-container ul li {
-              padding-bottom: 2rem;
-              padding-top: 2rem; }
-              nav .navigation__links-container ul li:hover {
-                background-color: #FF9393; } }
-      @media only screen and (max-width: 1000px) {
-        nav .navigation__links-container .button-secondary {
-          margin: 2rem; } }
 
 body {
   font-family: "Commissioner", sans-serif;
