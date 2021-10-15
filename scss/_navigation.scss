@@ -2,6 +2,7 @@ nav {
     height: 15rem;
     display: flex;
     // position: relative;
+
     @media only screen and (max-width: $medium) { 
         align-items: center;
         justify-content: space-between;
@@ -40,9 +41,41 @@ nav {
     }
 
     .navigation__links {
-        background-color: $red;
+        
         flex: 0 0 50%;
         display: flex;
+        position: relative;
+        background-color: $red;
+
+        &-mobile {
+            display: none;
+            position: absolute;
+            right: 4rem;
+            top: 15rem;
+            background-color: $red;
+
+            ul {
+
+                list-style: none;
+
+                li {
+                    padding: 2rem 4rem;
+                    text-align: center;
+                    color: $white;
+
+                    &:hover {
+                        background-color: $red-hover;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            button {
+                margin: 2rem 4rem;
+                
+
+            }
+        }
 
         @media only screen and (max-width: $medium) { 
             // margin-top: 48rem;

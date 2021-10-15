@@ -204,6 +204,9 @@ body {
   height: 73rem; }
   .services div[data-slide="2"] {
     z-index: 3; }
+  @media only screen and (max-width: 750px) {
+    .services {
+      height: 125rem; } }
   .services__slideshow {
     display: flex;
     min-height: 50rem;
@@ -240,6 +243,7 @@ body {
           .services__text .services__arrows svg:hover g {
             stroke: #FF9393; }
   .services__img-container {
+    overflow-x: hidden;
     position: relative; }
     .services__img-container::after {
       content: '';
@@ -309,9 +313,27 @@ nav {
         nav .navigation__logo .navigation__img-container {
           flex: 0 0 90%; } }
   nav .navigation__links {
-    background-color: #F94F4F;
     flex: 0 0 50%;
-    display: flex; }
+    display: flex;
+    position: relative;
+    background-color: #F94F4F; }
+    nav .navigation__links-mobile {
+      display: none;
+      position: absolute;
+      right: 4rem;
+      top: 15rem;
+      background-color: #F94F4F; }
+      nav .navigation__links-mobile ul {
+        list-style: none; }
+        nav .navigation__links-mobile ul li {
+          padding: 2rem 4rem;
+          text-align: center;
+          color: #FFFFFF; }
+          nav .navigation__links-mobile ul li:hover {
+            background-color: #FF9393;
+            cursor: pointer; }
+      nav .navigation__links-mobile button {
+        margin: 2rem 4rem; }
     @media only screen and (max-width: 1000px) {
       nav .navigation__links {
         display: none; } }

@@ -17,12 +17,13 @@ $( document ).ready(function() {
             $(this).attr('src', 'images/mobile/icon-hamburger.svg');
         }
 
-        $('.navigation__links').slideToggle('slow')
+        $('.navigation__links-mobile').slideToggle('slow');
     })
 
     $(window).resize(function() {
-        if ($(window).width() > 1000 && $('.menu-icon').attr('src') === 'images/mobile/icon-cross.svg') {
-            $('nav.navigation__links').css("display", "flex");
+        if ($(window).width() > 1000) {
+            $('.navigation__links-mobile').hide();
         }
     });
+    
 })
